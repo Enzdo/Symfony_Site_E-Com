@@ -1,25 +1,59 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html>
 
-{% block title %}Register
-{% endblock %}
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}Welcome!
+		{% endblock %}
+	</title>
 
-{% block body %}
-	<h1>Register</h1>
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+	{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+	{% block stylesheets %}
+	{{ encore_entry_link_tags('app') }}
+	{% endblock %}
 
-	{{ form_start(registrationForm) }}
-	{{ form_row(registrationForm.lastname) }}
-	{{ form_row(registrationForm.firstname) }}
-	{{ form_row(registrationForm.email) }}
+	{% block javascripts %}
+	{{ encore_entry_script_tags('app') }}
+	{% endblock %}
+</head>
 
-	<legend>Mes coordonnées</legend>
-	{{ form_row(registrationForm.adress) }}
-	{{ form_row(registrationForm.zipcode) }}
-	{{ form_row(registrationForm.city) }}
-	{{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-	{{ form_row(registrationForm.RGPDConsent) }}
+<body>
+	<dic class="login">
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h1>Inscription</h1>
+				{{ form_start(registrationForm) }}
+				{{ form_row(registrationForm.lastname) }}
+				{{ form_row(registrationForm.firstname) }}
+				{{ form_row(registrationForm.email) }}
 
-	<button type="submit" class="btn">Register</button>
-	{{ form_end(registrationForm) }}
-{% endblock %}
+				<legend>Mes coordonnées</legend>
+				{{ form_row(registrationForm.adress) }}
+				{{ form_row(registrationForm.zipcode) }}
+				{{ form_row(registrationForm.city) }}
+				{{ form_row(registrationForm.plainPassword, {
+				label: 'Password'
+				}) }}
+				{{ form_row(registrationForm.RGPDConsent) }}
+				<div class="valid">
+					<button type="submit" class="btn">Inscription</button>
+				</div>
+				{{ form_end(registrationForm) }}
+			</div>
+			<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Hello, Friend!</h1>
+					<p>deja un compte ? connecte toi</p>
+					<a href="{{path('app_login')}} "><button class="ghost" id="signUp">Sign Up</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>
