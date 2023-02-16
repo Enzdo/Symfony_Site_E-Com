@@ -22,13 +22,12 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50%;
+            width: 45%;
             height: 100%;
 
-            h1 {
-                font-size: 40px;
-                color: #000000;
-                text-align: center;
+            img {
+                width: 55%;
+                height: 90%;
             }
         }
 
@@ -37,7 +36,7 @@ header {
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            width: 50%;
+            width: 55%;
             height: 100%;
 
             a {
@@ -46,9 +45,10 @@ header {
                 h1 {
                     font-size: 25px;
                     color: $color_vert;
+                    text-transform: uppercase;
                 }
 
-                img {
+                svg {
                     width: 40px;
                     height: 40px;
                 }
