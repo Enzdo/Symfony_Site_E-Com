@@ -1,10 +1,20 @@
 .login {
+    display: flex;
+    flex-direction: row-reverse;
+
     .form-container {
         font-family: 'rubik';
         background-color: #FFFFFF;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        button {
+            color: rgb(0, 0, 0);
+            background-color: #fddac8;
+            border: none;
+            width: 100%;
+        }
 
     }
 
@@ -17,8 +27,8 @@
     }
 
     p {
-        font-size: 14px;
-        font-weight: 100;
+        font-size: 18px;
+        font-weight: 600;
         line-height: 20px;
         letter-spacing: 0.5px;
         margin: 20px 0 30px;
@@ -41,7 +51,7 @@
         border-radius: 20px;
         border: 1px solid #FF4B2B;
         background-color: #FF4B2B;
-        color: #FFFFFF;
+        color: #1c3e24;
         font-size: 12px;
         font-weight: bold;
         padding: 12px 45px;
@@ -62,7 +72,7 @@
 
     button.ghost {
         background-color: transparent;
-        border-color: #FFFFFF;
+        border-color: #1c3e24;
     }
 
     form {
@@ -164,13 +174,13 @@
     }
 
     .overlay {
-        background: #FF416C;
-        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-        background: linear-gradient(to right, #FF4B2B, #FF416C);
+        background: #fce6da;
+        background: -webkit-linear-gradient(to right, #fce6da, #fddac8);
+        background: linear-gradient(to right, #fce6da, #fddac8);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 0;
-        color: #FFFFFF;
+        color: #1c3e24;
         position: relative;
         left: -100%;
         height: 100%;

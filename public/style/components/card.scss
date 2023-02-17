@@ -1,5 +1,5 @@
 $color_beige: #fce6da;
-$color_vert: #1c3e24;
+$color_vert: black;
 $color_white: #fff;
 
 .patMoment {
@@ -39,7 +39,7 @@ $color_white: #fff;
                 }
 
                 p {
-                    font-size: 16px;
+                    font-size: 12px;
                     padding: 15px 0px;
                     font-weight: 500;
                 }
@@ -75,7 +75,7 @@ $color_white: #fff;
 
                 img {
                     margin-top: -30%;
-                    width: 140%;
+                    width: 300px;
                     height: 140%;
                 }
             }
