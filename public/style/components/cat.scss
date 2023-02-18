@@ -26,6 +26,43 @@
             h4 {
                 font-size: 25px;
             }
+
+            p {
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+.liste_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+
+    .container_list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .product_card {
+            padding: 20px 0;
+            width: 28%;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            p {
+                padding: 10px 0;
+            }
         }
     }
 }
