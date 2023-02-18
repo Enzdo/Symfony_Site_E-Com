@@ -6,15 +6,20 @@
 <div class="list">
     <div class="liste_cont">
         <h1> Liste de la categories {{ categories.name}} </h1>
-
+        <div>
+            <a href="{{ path('categories_list', {'slug': categories.slug}) }}">Tout afficher</a>
+            <a href="{{ path('categories_list', {'slug': categories.slug, 'sort': 'desc'}) }}"><?xml version="1.0" encoding="UTF-8"?><svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30"><defs><style>.cls-1{fill:#fff;}.cls-2{filter:url(#a);}.cls-3{fill:#014023;}</style><filter id="a" x="0" y="0" width="36" height="36"><feOffset dy="1"/><feGaussianBlur result="b" stdDeviation="1"/><feFlood flood-color="#d88787" flood-opacity="0.161"/><feComposite in="b" operator="in"/><feComposite in="SourceGraphic"/></filter></defs><g class="cls-2"><path class="cls-1" d="M30,15h0c0,8.28-6.72,15-15,15h0C6.72,30,0,23.28,0,15H0C0,6.72,6.72,0,15,0h0c8.28,0,15,6.72,15,15Z"/></g><g><path class="cls-3" d="M16,7.83v14.34c0,.55-.45,1-1,1s-1-.45-1-1V7.83c0-.55,.45-1,1-1s1,.45,1,1Z"/><path class="cls-3" d="M23.17,15c0,.55-.45,1-1,1-.27,0-.52-.11-.71-.29l-6.46-6.46-6.46,6.46c-.4,.38-1.03,.37-1.41-.02-.37-.39-.37-1,0-1.39l7.17-7.17c.39-.39,1.02-.39,1.41,0l7.17,7.17c.19,.19,.29,.44,.29,.71Z"/></g></svg></a>
+            <a href="{{ path('categories_list', {'slug': categories.slug, 'sort': 'asc'}) }}"><?xml version="1.0" encoding="UTF-8"?><svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30"><defs><style>.cls-1{fill:#fff;}.cls-2{filter:url(#a);}.cls-3{fill:#014023;}</style><filter id="a" x="0" y="0" width="36" height="36"><feOffset dy="1"/><feGaussianBlur result="b" stdDeviation="1"/><feFlood flood-color="#d88787" flood-opacity="0.161"/><feComposite in="b" operator="in"/><feComposite in="SourceGraphic"/></filter></defs><g class="cls-2"><path class="cls-1" d="M0,15H0C0,6.72,6.72,0,15,0h0c8.28,0,15,6.72,15,15h0c0,8.28-6.72,15-15,15h0C6.72,30,0,23.28,0,15Z"/></g><g><path class="cls-3" d="M14,22.17V7.83c0-.55,.45-1,1-1s1,.45,1,1v14.34c0,.55-.45,1-1,1s-1-.45-1-1Z"/><path class="cls-3" d="M6.83,15c0-.55,.45-1,1-1,.27,0,.52,.11,.71,.29l6.46,6.46,6.46-6.46c.4-.38,1.03-.37,1.41,.02,.37,.39,.37,1,0,1.39l-7.17,7.17c-.39,.39-1.02,.39-1.41,0l-7.17-7.17c-.19-.19-.29-.44-.29-.71Z"/></g></svg></a>
+        </div>
         <div class="container_list">
+
             {% for product in products %}
                 <div class="product_card">
-                    <img src="img/Ressources/Images/Patisseries/gateauAmande.png" alt="">
+                    {# <img src="{{ product.image }}" alt=""> #}
                     <div class="product_desc">
-                        <h1>{{product.name}}</h1>
-                        <p>{{product.price}} euro</p>
-                        <a href="{{ path('products_details', {'slug':  product.slug})}}"> Détails du produit </a>
+                        <h1>{{ product.name }}</h1>
+                        <p>{{ product.price }} euro</p>
+                        <a href="{{ path('products_details', {'slug': product.slug}) }}">Détails du produit</a>
                     </div>
                 </div>
             {% endfor %}

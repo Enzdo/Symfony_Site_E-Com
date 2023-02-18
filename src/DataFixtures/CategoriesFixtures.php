@@ -44,6 +44,16 @@ class CategoriesFixtures extends Fixture
         $category->setSlug($this->slugger->slug($category->getName())->lower());
         $category->setParent($parent);
         $category->setImage('image');
+        
+        // Condition pour définir la valeur de "category_order"
+        if ($this->counter == 1) {
+            $category->setCategoryOrder(0);
+        } elseif ($this->counter == 12) {
+            $category->setCategoryOrder(12);
+        } else {
+            $category->setCategoryOrder(1);
+        }
+
         $manager->persist($category);
 
         $this->addReference('cat-'.$this->counter, $category);

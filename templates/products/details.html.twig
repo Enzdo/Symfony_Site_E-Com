@@ -6,7 +6,9 @@
     <main class="detail_product">
         <section >
             <div class="top_product">
-                <img src="../img/Ressources/Images/Patisseries/gateauAmande.png" alt="">
+            {% for image in product.images %}
+                <img src="{{ asset('../assets/public/') ~ image.name }}" alt="">
+            {% endfor %}
                 {# <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         {% for iteration in 1..product.images|length %}

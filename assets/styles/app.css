@@ -196,6 +196,10 @@ header .panier {
   align-items: start;
   width: 80%;
 }
+.liste_cont svg {
+  width: 45px;
+  height: 45px;
+}
 .liste_cont .container_list {
   display: flex;
   justify-content: space-between;
