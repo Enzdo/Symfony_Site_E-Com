@@ -9,6 +9,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Users;
 use App\Entity\Products;
+use App\Entity\Categories;
+
 
 class adminController extends AbstractDashboardController
 {
@@ -31,5 +33,6 @@ class adminController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', Users::class);
         yield MenuItem::linkToCrud('Products', 'fas fa-cookie-bite', Products::class);
+        yield MenuItem::linkToCrud('Categories', 'fas fa-list', Categories::class);
     }
 }
