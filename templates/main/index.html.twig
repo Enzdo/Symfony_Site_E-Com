@@ -181,7 +181,21 @@
 		<div class="cat">
 			<h1>CATÉGORIES</h1>
 			<div class="select">
-				<a href="">
+				{% for category in categories %}
+					{% if category.parent is not null %}
+						<div class="card">
+							<div class="texte-card">
+								<h4>{{ category.name }}</h4>
+								{% set parent = category.parent %}
+								<p>types: {{ parent.name }}</p>
+								<a href="{{ path('categories_list', {slug: category.slug}) }}" class="btn btn-primary">Voir les produits</a>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+				
+
+				{# <a href="">
 					<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 54 54">
 						<g transform="translate(-263 -870)">
 							<circle cx="27" cy="27" r="27" transform="translate(263 870)" fill="#fff"/>
@@ -225,7 +239,7 @@
 							</g>
 						</g>
 					</svg>
-				</a>
+				</a> #}
 
 			</div>
 		</div>

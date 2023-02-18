@@ -21,9 +21,9 @@ header .nav .logo {
   width: 45%;
   height: 100%;
 }
-header .nav .logo img {
-  width: 55%;
-  height: 90%;
+header .nav .logo #Calque_1 {
+  width: 350px;
+  height: 550px;
 }
 header .nav nav {
   display: flex;
@@ -166,16 +166,20 @@ header .panier {
 }
 .cat .select {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   padding-top: 5%;
 }
-.cat .select a {
-  padding: 0% 7%;
+.cat .select .card {
+  margin: 10px 0;
+  padding: 20px 10px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
 }
-.cat .select a svg {
-  width: 105px;
-  height: 105px;
+.cat .select .card h4 {
+  font-size: 25px;
 }
 
 .login {
