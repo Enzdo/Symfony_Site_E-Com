@@ -172,11 +172,9 @@ header .panier {
   padding-top: 5%;
 }
 .cat .select .card {
-  margin: 10px 0;
-  padding: 20px 10px;
-  width: 350px;
+  padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 .cat .select .card h4 {
   font-size: 25px;
@@ -196,6 +194,25 @@ header .panier {
   align-items: start;
   width: 80%;
 }
+.liste_cont .tri {
+  padding: 40px 0;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.liste_cont .tri #but {
+  display: flex;
+  align-items: center;
+  background-color: #1c3e24;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 20px;
+  color: white;
+}
+.liste_cont .tri a {
+  text-decoration: none;
+}
 .liste_cont svg {
   width: 45px;
   height: 45px;
@@ -204,17 +221,45 @@ header .panier {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 20px 0;
 }
 .liste_cont .container_list .product_card {
+  margin: 40px 0;
   padding: 20px 0;
   width: 28%;
+  background-color: white;
+  border-radius: 70% 70% 12px 12px;
+  padding: 20px 15px 25px 15px;
+}
+.liste_cont .container_list .product_card .top {
+  height: 60%;
+}
+.liste_cont .container_list .product_card img {
+  margin-top: -10%;
+  max-width: 100%;
+  height: auto;
 }
 .liste_cont .container_list .product_card a {
   text-decoration: none;
-  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #1c3e24;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 20px;
+  color: white;
 }
 .liste_cont .container_list .product_card p {
-  padding: 10px 0;
+  padding: 20px 0;
+}
+.liste_cont .container_list .product_desc {
+  padding-top: 40px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .error {

@@ -17,11 +17,9 @@
         padding-top: 5%;
 
         .card {
-            margin: 10px 0;
-            padding: 20px 10px;
-            width: 350px;
+            padding: 20px;
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 50%;
 
             h4 {
                 font-size: 25px;
@@ -46,6 +44,28 @@
     align-items: start;
     width: 80%;
 
+    .tri {
+        padding: 40px 0;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        #but {
+            display: flex;
+            align-items: center;
+            background-color: #1c3e24;
+            border: none;
+            border-radius: 16px;
+            padding: 5px 20px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
     svg {
         width: 45px;
         height: 45px;
@@ -55,19 +75,51 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 20px 0;
 
         .product_card {
+            margin: 40px 0;
             padding: 20px 0;
             width: 28%;
+            background-color: white;
+            border-radius: 70% 70% 12px 12px;
+            padding: 20px 15px 25px 15px;
+
+            .top {
+                height: 60%;
+            }
+
+            img {
+                margin-top: -10%;
+                max-width: 100%;
+                height: auto;
+
+            }
 
             a {
                 text-decoration: none;
-                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: #1c3e24;
+                border: none;
+                border-radius: 16px;
+                padding: 5px 20px;
+                color: white;
             }
 
             p {
-                padding: 10px 0;
+                padding: 20px 0;
             }
+        }
+
+        .product_desc {
+            padding-top: 40px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 }
