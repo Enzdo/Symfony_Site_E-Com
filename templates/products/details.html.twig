@@ -3,13 +3,11 @@
 {% block title %}Détails de {{ product.name }} {% endblock %}
 
 {% block body %}
-    <main class="container">
-        <section class="row">
-            <div class="col-12">
-                <h1>{{ product.name }}</h1>
-            </div>
-            <div class="col-6">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <main class="detail_product">
+        <section >
+            <div class="top_product">
+                <img src="../img/Ressources/Images/Patisseries/gateauAmande.png" alt="">
+                {# <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         {% for iteration in 1..product.images|length %}
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ iteration - 1 }}" {{ (loop.first ) ?'class="active" aria-current="true"' : '' }} aria-label="Slide {{ iteration }}"></button>
@@ -30,17 +28,26 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
+                </div> #}
             </div>
-            <div class="col-6">
+            <div class="details_desc">
+                <h1>{{ product.name }}</h1>
+                <h6>Prix : {{ product.price / 100 }} €</h6>
+                <h4>Ingrédients</h4>
+                <div class="ingr">
+                    <li>Lorem</li><li>Lorem</li><li>Lorem</li>
+                </div>
+                <h4>Details</h4>
                 <p>{{ product.description }}</p>
-                <p>Catégorie : {{ product.categories.name }}</p>
-                <p>Prix : {{ product.price / 100 }} €</p>
-                {% if product.stock > 0 %}
-                    <a href="#" class="btn btn-success">Ajouter au panier</a>
-                {% else %}
-                    <p class="text-danger">Temporairement en rupture de stock</p>
-                {% endif %}
+                <div class="add">
+                    <p>Types : {{ product.categories.name }}</p>
+                        {% if product.stock > 0 %}
+                            <a href="#"> <button> <span><svg xmlns="http://www.w3.org/2000/svg" width="18.478" height="15.941" viewBox="0 0 18.478 15.941"><path d="M17.471,11.03,13.792,5.524a.817.817,0,0,0-.7-.357.827.827,0,0,0-.7.357L8.719,11.03H4.7a.842.842,0,0,0-.84.84.986.986,0,0,0,.029.227l2.129,7.786a1.684,1.684,0,0,0,1.621,1.226H18.554a1.674,1.674,0,0,0,1.617-1.23L22.3,12.092a.749.749,0,0,0,.034-.223.842.842,0,0,0-.84-.84H17.471Zm-6.9,0,2.52-3.7,2.52,3.7Zm2.52,6.719a1.68,1.68,0,1,1,1.68-1.68A1.679,1.679,0,0,1,13.095,17.749Z" transform="translate(-3.856 -5.167)" fill="#fff"/></svg></span> Ajouter au panier </button></a>
+                        {% else %}
+                            <p class="text-danger">Temporairement en rupture de stock</p>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </section>
     </main>

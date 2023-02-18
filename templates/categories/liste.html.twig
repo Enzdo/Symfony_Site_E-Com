@@ -14,7 +14,7 @@
                     <div class="product_desc">
                         <h1>{{product.name}}</h1>
                         <p>{{product.price}} euro</p>
-                        <a href="#"> Détails du produit </a>
+                        <a href="{{ path('products_details', {'slug':  product.slug})}}"> Détails du produit </a>
                     </div>
                 </div>
             {% endfor %}

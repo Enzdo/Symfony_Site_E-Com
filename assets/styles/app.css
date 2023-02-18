@@ -213,6 +213,126 @@ header .panier {
   padding: 10px 0;
 }
 
+.error {
+  width: 100%;
+  height: 100vh;
+  background-color: #fce6da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.error h1 {
+  display: flex;
+  align-items: center;
+  font-size: 155px;
+}
+.error h1 span {
+  width: 155px;
+  height: 255px;
+  object-fit: cover;
+}
+.error h1 span img {
+  margin-left: -30%;
+  width: 255px;
+  height: 255px;
+}
+.error a {
+  font-size: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+.detail_product {
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 55px;
+}
+.detail_product section {
+  width: 50%;
+  background-color: white;
+  border-radius: 50% 50% 12px 12px;
+  margin-bottom: 55px;
+}
+.detail_product section .top_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+}
+.detail_product section .top_product img {
+  width: 500px;
+  height: 550px;
+  margin-top: -20%;
+}
+.detail_product section .details_desc {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+.detail_product section .details_desc h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1c3e24;
+}
+.detail_product section .details_desc h6 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.detail_product section .details_desc h4 {
+  padding: 20px 0px 5px 0px;
+  font-size: 18px;
+  color: #f7cdb7;
+  font-weight: 400;
+}
+.detail_product section .details_desc .ingr {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+}
+.detail_product section .details_desc .ingr li {
+  list-style-type: none;
+  color: #f7cdb7;
+  padding: 2px 20px;
+  border: 2px solid #f7cdb7;
+  border-radius: 12px;
+}
+.detail_product section .details_desc p {
+  font-size: 14px;
+}
+.detail_product section .details_desc .add {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.detail_product section .details_desc .add a {
+  text-decoration: none;
+}
+.detail_product section .details_desc .add a button {
+  display: flex;
+  align-items: center;
+  background-color: #1c3e24;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 20px;
+  color: white;
+}
+.detail_product section .details_desc .add a button span {
+  padding: 0px 20px 0 0;
+}
+.detail_product section .details_desc .add a svg {
+  width: 25px;
+  height: 25px;
+}
+
 .login {
   display: flex;
   flex-direction: row-reverse;
