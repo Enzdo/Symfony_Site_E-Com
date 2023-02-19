@@ -9,7 +9,6 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class CategoriesFixtures extends Fixture
 {
-
     private $counter = 1;
 
     public function __construct(private SluggerInterface $slugger){}
@@ -43,15 +42,14 @@ class CategoriesFixtures extends Fixture
         $category->setName($name);
         $category->setSlug($this->slugger->slug($category->getName())->lower());
         $category->setParent($parent);
-        
+
         // Définir le nom de l'image
         $image = strval($this->counter - 1);
         $category->setImage($image);
-    
-    
         $manager->persist($category);
+        $this->addReference('cat-'.$this->counter, $category);
         $this->counter++;
-    
+
         return $category;
     }
 }
