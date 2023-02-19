@@ -32,7 +32,7 @@ class CategoriesFixtures extends Fixture
 
         $this->createCategory('La religieuse', $parent, $manager);
         $this->createCategory('Les macarons', $parent, $manager);
-        $this->createCategory('Les chouquettes', $parent, $manager);
+        $this->createCategory('Donuts', $parent, $manager);
                 
         $manager->flush();
     }

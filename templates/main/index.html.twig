@@ -62,7 +62,7 @@
 				{% for category in categories %}
 					{% if category.parent is not null %}
 						<div class="card">
-							<a href="{{ path('categories_list', {slug: category.slug}) }}"> <img src="{{ asset('assets/public/categorie/') ~ category.image ~('.png') }}" alt="{{ category.name }}"></a>
+							<a href="{{ path('categories_list', {slug: category.slug}) }}"> <img id="img" src="{{ asset('assets/ah/') ~ category.image ~('.png') }}" alt="{{ category.name }}"></a>
 						</div>
 					{% endif %}
 				{% endfor %}

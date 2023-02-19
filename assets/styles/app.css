@@ -180,10 +180,14 @@ header .panier {
   width: 25%;
 }
 .cat .select .card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 20px 0;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 50%;
+}
+.cat .select .card a #img {
+  width: 250px;
+  height: auto;
 }
 .cat .select .card h4 {
   font-size: 25px;
@@ -269,11 +273,6 @@ header .panier {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.card_other {
-  background-color: white;
-  padding: 40px;
 }
 
 .error {
