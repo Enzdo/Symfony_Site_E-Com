@@ -145,13 +145,15 @@ header .panier {
   height: 20px;
 }
 .patMoment .container-card .card .photo {
-  width: 45%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 55%;
   height: 110%;
 }
 .patMoment .container-card .card .photo img {
-  margin-top: -30%;
-  width: 300px;
-  height: 140%;
+  width: 170%;
+  height: auto;
 }
 
 .cat {
@@ -172,6 +174,13 @@ header .panier {
   padding-top: 5%;
 }
 .cat .select .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+.cat .select .card a {
+  margin: 20px 0;
   padding: 20px;
   background-color: #fff;
   border-radius: 50%;
@@ -260,6 +269,11 @@ header .panier {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.card_other {
+  background-color: white;
+  padding: 40px;
 }
 
 .error {
@@ -380,6 +394,46 @@ header .panier {
 .detail_product section .details_desc .add a svg {
   width: 25px;
   height: 25px;
+}
+.detail_product .other {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.detail_product .card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: white;
+  padding: 40px;
+  margin: 20px 20px;
+  border-radius: 12px;
+  width: 46%;
+}
+.detail_product .card .photo {
+  width: 40%;
+}
+.detail_product .card img {
+  width: 100%;
+  height: auto;
+}
+.detail_product .card .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.detail_product .card .description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c3e24;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .login {

@@ -28,5 +28,31 @@
                 </div>
             </div>
         </section>
+        <div class="other">
+            {% set current_product = product %}
+            {% set other_products = [] %}
+
+            {% for key, product in products_other %}
+                {% if product.categories.name == current_product.categories.name and product.id != current_product.id %}
+                    {% set other_products = other_products|merge([product]) %}
+                {% endif %}
+            {% endfor %}
+
+            {% for key, product in other_products|slice(0, 4) %}
+                <div class="card">
+                    <div class="photo">
+                        <img src="{{ asset('assets/public/') ~ product.picture }}" alt="">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>{{ product.name }}</h1>
+                            <h4>Prix : {{ product.price }}€</h4>
+                        </div>
+                        <p>Types : {{ product.categories.name }}</p>
+                        <a href="{{ path('products_details', {'slug': product.slug}) }}">Details produit</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </main>
 {% endblock %}

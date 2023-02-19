@@ -104,4 +104,50 @@ $color_beige: #f7cdb7;
 
         }
     }
+
+    .other {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color: white;
+        padding: 40px;
+        margin: 20px 20px;
+        border-radius: 12px;
+        width: 46%;
+
+        .photo {
+            width: 40%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #1c3e24;
+                border: none;
+                border-radius: 16px;
+                padding: 5px 20px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
 }
