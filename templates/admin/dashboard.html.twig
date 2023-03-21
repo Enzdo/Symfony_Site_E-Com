@@ -5,4 +5,7 @@
     <div class="">
         <h1> Bienvenue au sein de l'administration de ...</h1>
     </div>
+    {% if 'ROLE_SUPER_ADMIN' in app.user.roles %}
+        <h1> Coucou le vrai admin </h1>
+    {% endif %}
 {% endblock %}

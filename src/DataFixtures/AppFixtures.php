@@ -31,6 +31,20 @@ class AppFixtures extends Fixture
 
         $manager->persist($admin);
 
+        $superadmin = new Users();
+        $superadmin->setEmail('superadmin@gmail.com');
+        $superadmin->setLastname('Deniau');
+        $superadmin->setFirstname('Enzo');
+        $superadmin->setAdress('12 rue du port');
+        $superadmin->setZipcode('75001');
+        $superadmin->setCity('Paris');
+        $superadmin->setPassword(
+            $this->passwordEncoder->hashPassword($superadmin, 'admin')
+        );
+        $superadmin->setRoles(['ROLE_SUPER_ADMIN']);
+
+        $manager->persist($superadmin);
+
         $faker = Faker\Factory::create('fr_FR');
 
         for($usr = 1; $usr <= 50; $usr++){
