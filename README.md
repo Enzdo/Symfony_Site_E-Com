@@ -83,3 +83,14 @@ Rentrer les infos des tables dans le fichier ``src/DataFixtures/AppFixtures.php`
 ```bash
 php bin/console doctrine:fixture:load
 ```
+# <p align="center">Setup Yarn/Webpack  </p>
+
+```bash
+composer require symfony/webpack-encore-bundle
+```
+```bash
+npm install
+```
+```bash
+npm run dev
+```
